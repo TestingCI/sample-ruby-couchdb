@@ -9,4 +9,4 @@ env:
 services:
   - couchdb
 
-archive: true
+#archive: true
