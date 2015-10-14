@@ -3,10 +3,27 @@ language: ruby
 
 rvm:
   - 1.9.3
+  
+  
 env:
+ global:
+  - secure: jVdxQOjaKaB7XwYE//hn13ZMQdp69BDEwGU4NeGvagTCfdNp7swSFAmtuzwY1nu5GA9Xnvoz/BY+F9PMSA1F9xbOEix9dywSqj2kHJV9KrmiK9LEjbC2zgu8i1Zhh5tj95W+V+UHPDso5NpodbVMeihmpvwcwlkaS62MOG/5vuFiKA5SghcPggwzLT5Fw9SCH9cayR5yOlX75n5fY+/jGZ2Sf/QO5DCvunFqM2beAN0s5sxGo666nWGo3cHcu9YLFhcwLCSujIIy1GOsLtdDJfi5Ic0jQjJS9lG2FiQz6g8tfoNt6IAte54Mc1Fw+CXeoqptqdoRRBRJOMOwiBXNMg==
   - CI_REPORTS=shippable/testresults COVERAGE_REPORTS=shippable/codecoverage
 
 services:
   - couchdb
 
 archive: true
+
+before_script:
+  - echo $key1
+  
+after_script:
+  - echo "HI"
+  
+after_success:
+  - echo "BUILD passed"
+
+after_failure:
+  - echo "Build failed"
+  
