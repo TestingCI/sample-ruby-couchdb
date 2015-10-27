@@ -7,7 +7,7 @@ class Bowling
     @db = CouchRest.database!("http://127.0.0.1:5984/test")
 
     response = @db.save_doc({
-        :key => 000,
+        :key => 1234,
         :title => "Bowling Score",
         :content => "Strike"
     })
